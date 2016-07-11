@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Cedarville Cursive';
+  color: #fff;
+  background: url('../images/chalkboard.jpg')no-repeat fixed;
+  background-size: 100% 100%;
+
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container{
+  	height: inherit;  
+
+}
+
+h1{
+	color: #fff;
+	font-size: 5rem;
+	text-align: center;
+	padding: 2rem 2rem;
+
+}
+
+.text-container{
+	text-align: center;
+	width: 35%;
+	margin: 0 auto;
+	
+	
+}
+
+#textbox{
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	width: 80%;
+	height: 4rem;
+	font-size: 3rem;
+	font-family: 'Shadows Into Light';
+	padding-left: .5rem;
+
+
+}
+
+.btn-add{
+	height: 4rem;
+	width: 4rem;
+	border-radius: 50%;
+	background-color: #919191;
+	border-style: none;
+	font-size: 2rem;
+	float: right;
+	
+	
+}
+
+
+.items{
+	width: 35%;
+	margin: 1rem auto;
+	list-style: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-top: 5rem;
+
+
+}
+
+.items li{
+	font-size: 3rem;
+}
+
+.edit, .delete{
+	color: white;
+	float: right;
+	padding-right: .5rem;
+}
+
+.cross-out{
+	text-decoration: line-through;
+}
+
+.check, .edit, .delete, .btn-add:hover{
+	cursor: pointer;
+}
+
