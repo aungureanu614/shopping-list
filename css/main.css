@@ -13,16 +13,13 @@ html {
   box-sizing: inherit;
 }
 
-.container{
-  	height: inherit;  
-
-}
-
 h1{
 	color: #fff;
 	font-size: 5rem;
 	text-align: center;
 	padding: 2rem 2rem;
+	
+	
 
 }
 
@@ -30,7 +27,7 @@ h1{
 	text-align: center;
 	width: 35%;
 	margin: 0 auto;
-	
+
 	
 }
 
@@ -56,9 +53,7 @@ h1{
 	font-size: 2rem;
 	float: right;
 	
-	
 }
-
 
 .items{
 	width: 35%;
