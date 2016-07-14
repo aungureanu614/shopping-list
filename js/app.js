@@ -4,8 +4,15 @@ $(document).ready(function(){
      
   $('.btn-add').click(function(){
     var userItem = $('#textbox').val();
-    $('ul').append($('<li><span class="check">&#9989;</span>' + '<span class="list-item">' + userItem + '</span>' + '<span class="delete">&#10008;</span><span class="edit">&#10000;</span></li>'));
-    $('#textbox').val('');
+   
+    if(userItem == ''){
+		alert('Please enter an item');
+	}
+	else{
+		 $('ul').append($('<li><span class="check">&#9989;</span>' + '<span class="list-item">' + userItem + '</span>' + '<span class="delete">&#10008;</span><span class="edit">&#10000;</span></li>'));
+    	 $('#textbox').val('');
+	}
+
   }),
 
  $('ul').on('click', '.delete', function(event){
