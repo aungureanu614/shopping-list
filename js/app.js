@@ -13,7 +13,11 @@ $(document).ready(function(){
 }),
 
   $('ul').on('click', '.check', function(event){
-       $(this).parent().addClass('cross-out');
+       if($(this).parent().hasClass('cross-out'))
+       		$(this).parent().removeClass('cross-out');
+  
+       else
+       		$(this).parent().addClass('cross-out');
 
 }),
 
