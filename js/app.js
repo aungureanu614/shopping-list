@@ -1,10 +1,11 @@
 
 
 $(document).ready(function(){
+ 
 
    //Event for adding items to shopping cart using the "+" icon  
-  $('.btn-add').click(function(){
-    var userItem = $('#textbox').val();
+  $('.btn-add').on('click', function(){
+     var userItem = $('#textbox').val();
    //check to see if user has made an input in the textbox
     if(userItem){
 		$('#items').append($('<li><span class="check">&#9989;</span>' + '<span class="list-item">' + userItem + '</span>' + '<span class="delete icon-style">&#10008;</span><span class="edit icon-style">&#10000;</span></li>'));
@@ -15,6 +16,13 @@ $(document).ready(function(){
 	}
 
   }),
+
+   $('#textbox').keypress(function(event){
+        if(event.which == 13){//Enter key pressed
+            $('.btn-add').click();//Trigger search button click event
+        	event.preventDefault();
+        }
+    }),
   	//Event for clicking on delete
  $('#items').on('click', '.delete', function(){
        $(this).parent().remove();
