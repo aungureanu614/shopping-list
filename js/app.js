@@ -19,8 +19,8 @@ $(document).ready(function(){
 
    $('#textbox').keypress(function(event){
         if(event.which === 13){//Enter key pressed
-            $('.btn-add').click();//Trigger search button click event
-        	event.preventDefault();
+            $('.btn-add').click();//Trigger add event
+        	event.preventDefault(); //Prevent browser from reloading
         }
     }),
   	//Event for clicking on delete
