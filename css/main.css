@@ -55,7 +55,7 @@ h1{
 	
 }
 
-.items{
+#items{
 	width: 35%;
 	margin: 1rem auto;
 	list-style: none;
@@ -66,11 +66,11 @@ h1{
 
 }
 
-.items li{
+#items li{
 	font-size: 3rem;
 }
 
-.edit, .delete{
+.icon-style{
 	color: white;
 	float: right;
 	padding-right: .5rem;
@@ -87,3 +87,4 @@ h1{
 .check{
 	padding-right: 2rem;
 }
+

@@ -1,25 +1,27 @@
 
 
 $(document).ready(function(){
-     
+
+   //Event for adding items to shopping cart using the "+" icon  
   $('.btn-add').click(function(){
     var userItem = $('#textbox').val();
-   
-    if(userItem == ''){
-		alert('Please enter an item');
+   //check to see if user has made an input in the textbox
+    if(userItem){
+		$('#items').append($('<li><span class="check">&#9989;</span>' + '<span class="list-item">' + userItem + '</span>' + '<span class="delete icon-style">&#10008;</span><span class="edit icon-style">&#10000;</span></li>'));
+    	$('#textbox').val('');
 	}
 	else{
-		 $('ul').append($('<li><span class="check">&#9989;</span>' + '<span class="list-item">' + userItem + '</span>' + '<span class="delete">&#10008;</span><span class="edit">&#10000;</span></li>'));
-    	 $('#textbox').val('');
+	     alert('Please enter an item');
 	}
 
   }),
-
- $('ul').on('click', '.delete', function(event){
+  	//Event for clicking on delete
+ $('#items').on('click', '.delete', function(){
        $(this).parent().remove();
   }),
-
-  $('ul').on('click', '.check', function(event){
+	//Event for clicking on check mark
+  $('#items').on('click', '.check', function(){
+  	//Logic for checking and unchecking an item
        if($(this).parent().hasClass('cross-out'))
        		$(this).parent().removeClass('cross-out');
   
@@ -27,11 +29,11 @@ $(document).ready(function(){
        		$(this).parent().addClass('cross-out');
 
    }),
-
-   $('ul').on('click', '.edit', function(event){
+  	//Event for clicking on the pencil (edit) icon
+   $('#items').on('click', '.edit', function(){
        var editItem = $(this).parent().find('.list-item').text();
-       $('#textbox').val(editItem);
-       $(this).parent().remove();
+       $('#textbox').val(editItem); //Pass list item content to textbox
+       $(this).parent().remove(); 
    });
 
 });
