@@ -18,7 +18,7 @@ $(document).ready(function(){
   }),
 
    $('#textbox').keypress(function(event){
-        if(event.which == 13){//Enter key pressed
+        if(event.which === 13){//Enter key pressed
             $('.btn-add').click();//Trigger search button click event
         	event.preventDefault();
         }
